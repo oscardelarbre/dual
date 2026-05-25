@@ -44,7 +44,7 @@ from tqdm import tqdm
 #  Load data and basic cleaning
 # --------------------------------------------------
 
-dir = "/Users/silyamoussous/Desktop/Dual/US_data.csv"  # set the path to the US_data folder here
+dir = os.path.join(os.path.dirname(__file__), "US_data.csv")
 
 data = pd.read_csv(dir)
 data["Date"] = pd.to_datetime(data["Date"])
